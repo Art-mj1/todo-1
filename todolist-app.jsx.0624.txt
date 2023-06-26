@@ -1,0 +1,99 @@
+import React, { useState } from "react";
+import "./App.css";
+import Button from "./components/Button";
+import User2 from "./components/User2";
+import Finish from "./components/Finish";
+const App = () => {
+  const [initial, initialState] = useState([
+    { id: 0, title: "none", contents: "none", isDone: false },
+    { id: 1, title: "none1", contents: "none1", isDone: false },
+    { id: 2, title: "none2", contents: "none2", isDone: false },
+    { id: 3, title: "none3", contents: "none3", isDone: false },
+    { id: 4, title: "none4", contents: "none4", isDone: true },
+  ]);
+
+  const [title, setName] = useState("");
+  const [contents, setContents] = useState("");
+
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
+  };
+  const contentsChangeHandler = (event) => {
+    setContents(event.target.value);
+  };
+  //추가버튼클릭
+  const clickAddButtonHandler = () => {
+    //1.새로운 형태의 이것을 만든다.
+    //newUser:{ id: 1, age: 30, title: "송중기" },
+    //2.newUser을 배열에 더한다
+    const newUser = {
+      id: initial.length + 1,
+      contents,
+      title: title,
+      isDone: false,
+    };
+    initialState([...initial, newUser]);
+  };
+
+  // 완료버튼 상태 초기값
+
+  //삭제버튼클릭
+  const clickRemoveButtonHandler = (id) => {
+    const newUsers = initial.filter((user) => user.id !== id);
+    initialState(newUsers);
+  };
+  //완료버튼클릭
+  // const [todoDone, setTodoDone] = useState([]);
+  const clickFinishButtonHandler = (fin) => {
+    //이제부터 완료를 만들어보아요
+    //밑의 코드는 복제 만들기인데
+    //아마 벨류값 못받아온듯?
+    // ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+    //벨류가
+
+    //수정하기 위한 애가 없어 isDone: true 이걸 수정해야한다.
+    const newTodoDone = {
+      id: 0,
+      title: "",
+      contents: "",
+    };
+    initialState([...initial, newTodoDone]);
+    // initialState(initial.filter((s) => s.id !== fin.id));
+  };
+  return (
+    <div>
+      <div className='titles-wrap'>
+        <div className='titles'>
+          제목:&nbsp;
+          <input
+            value={title}
+            onChange={(event) => {
+              nameChangeHandler(event);
+            }}
+          />
+          나이:&nbsp;
+          <input value={contents} onChange={contentsChangeHandler} />
+          <br />
+          <Button clickAddButtonHandler={clickAddButtonHandler} className='Add'>
+            추가
+          </Button>
+        </div>
+      </div>
+
+      <div className='app-style'>
+        {initial.map((item) => {
+          return (
+            <Finish
+              key={item.id}
+              item={item}
+              removeFunction={clickRemoveButtonHandler}
+              finishFunction={clickFinishButtonHandler}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default App;

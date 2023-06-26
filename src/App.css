@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+/* 전체 레이아웃 구성부분*/
+.wrap{width:1900px;margin:auto;background: #ffd9d9;}
+.wrap>.total {
+  width: 1200px;
+  margin: auto;
+  height: 100vh;background:#ffffff;
+}
+
+
+/* 내용입력하는 부분 */
+.titles-wrap{display:flex;align-items: center;}
+.titles-wrap>.titles{display: flex; align-items: center; justify-content: center;
+  background: white; width: 100%; background: #0f0f0f;
+    color: #ffffff;height:5%}
+.titles-wrap>.add{border:1px solid #104c43;color:#104c43}
+.titles-wrap>.titles>button{display:flex;margin-left:10px;}
+.titles-wrap>.titles>.titles-tit,
+.titles-wrap>.titles>.titles-con{display:flex;align-items: center;justify-content: center;width:30%;}
+.titles-wrap>.titles>.titles-tit>h4,
+.titles-wrap>.titles>.titles-con>h4{font-size:15px;width:13%;text-align: center;}
+.titles-wrap>.titles>.titles-con {display: flex; align-items: center; justify-content: center;}
+.titles-wrap>.titles>.titles-tit>input,
+ .titles-wrap>.titles>.titles-con>input{width:90%;background:#ffffff;color:#0f0f0f;height:18px;}
+ .titles>.btn{width:5%;height:100%;}
+.titles>.btn>button{background:#ffffff;color:#0f0f0f;font-size:12px;border:none;height:21px;margin-left:5px;}
+
+/* DONE,FINISH */
+.main{margin: auto;width: 1100px;height: 45%;}        
+.main>.title{font-size:35px;}
+.main>.todo-style {
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  margin: auto;
+  width: 100%;
+  white-space: nowrap;
+}
+.main>.todo-style>.component-style {
+  border: 5px solid #ffd9d9;
+  width: calc(100%/5);
+  height: 230px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.todo-style>.component-style>.buttons{display:flex;}
+.todo-style>.component-style>.buttons>button{background: #ffb4b4;;color:#ffffff;border:none;padding: 1px; margin: 10px; height: 30px; font-size: 16px; width: 78px;font-weight:800;}
+.component-style>.item-title{width: 100%;
+  height: 3px;font-size:25px;}
+.component-style>.item-content{font-size:19px;}
+
+.main>.finish-style {
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  margin: auto;
+  width: 100%;
+  white-space: nowrap;
+}
+.main>.finish-style>.component-style {
+  border: 5px solid #028f83;
+    width: calc(100%/5);
+    height: 230px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.finish-style>.component-style>.buttons {
+  display: flex;
+}
+.finish-style>.component-style>.buttons>button {
+  background: #028f83;
+  color: #ffffff;
+  border: none;
+  padding: 1px;
+  margin: 10px;
+  height: 30px;
+  font-size: 16px;
+  width: 78px;
+  font-weight: 800;
+}
