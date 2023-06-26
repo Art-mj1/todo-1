@@ -12,19 +12,19 @@
   font-style: normal;
 }
 /* 전체 레이아웃 구성부분*/
-.wrap{width:1900px;margin:auto;background: #ffd9d9;}
+.wrap{width:1900px;margin:auto;background: #ffd9d9;height:100vh;}
 .wrap>.total {
   width: 1200px;
   margin: auto;
-  height: 100vh;background:#ffffff;
+  height: 100%;background:#ffffff;
 }
 
 
 /* 내용입력하는 부분 */
-.titles-wrap{display:flex;align-items: center;}
+.titles-wrap{display:flex;align-items: center;height:8%;}
 .titles-wrap>.titles{display: flex; align-items: center; justify-content: center;
   background: white; width: 100%; background: #0f0f0f;
-    color: #ffffff;height:5%}
+    color: #ffffff;height:100%}
 .titles-wrap>.add{border:1px solid #104c43;color:#104c43}
 .titles-wrap>.titles>button{display:flex;margin-left:10px;}
 .titles-wrap>.titles>.titles-tit,
@@ -34,11 +34,11 @@
 .titles-wrap>.titles>.titles-con {display: flex; align-items: center; justify-content: center;}
 .titles-wrap>.titles>.titles-tit>input,
  .titles-wrap>.titles>.titles-con>input{width:90%;background:#ffffff;color:#0f0f0f;height:18px;}
- .titles>.btn{width:5%;height:100%;}
+ .titles>.btn{width:5%;}
 .titles>.btn>button{background:#ffffff;color:#0f0f0f;font-size:12px;border:none;height:21px;margin-left:5px;}
 
 /* DONE,FINISH */
-.main{margin: auto;width: 1100px;height: 45%;}        
+.main{margin: auto;width: 1100px;height: 40%;}        
 .main>.title{font-size:35px;}
 .main>.todo-style {
   padding: 0;
